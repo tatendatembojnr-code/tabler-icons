@@ -36,6 +36,9 @@ packages/icons*/stats/*
 
 !/**/.gitkeep
 *.tgz
-.env
 .astro
 .pnpm-store/
+config.bat
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
