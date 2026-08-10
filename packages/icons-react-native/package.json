@@ -53,9 +53,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm run clean && pnpm run copy:license && pnpm run build:icons && pnpm typecheck && pnpm run build:bundles",
-    "build:icons": "node build.mjs",
-    "build:bundles": "rollup -c ./rollup.config.mjs",
+    "build": "node init && pnpm run clean && pnpm run copy:license && pnpm run build:icons && pnpm typecheck && pnpm run build:bundles",
+    "build:icons": "node init && node build.mjs",
+    "build:bundles": "node init && rollup -c ./rollup.config.mjs",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "find dist -mindepth 1 -delete 2>/dev/null; rm -rf dist && find . ! -name '.gitkeep' -path '*/src/icons/*' -exec rm -rf {} +",
     "typecheck": "tsc",
