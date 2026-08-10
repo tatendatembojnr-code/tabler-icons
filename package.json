@@ -11,7 +11,7 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "eleventy --serve --watch",
+    "dev": "node api.js && eleventy --serve --watch",
     "preview": "eleventy",
     "build": "pnpm run validate && pnpm run update && pnpm run validate --hard && pnpm run optimize && pnpm run build:packages && pnpm run preview && pnpm run changelog-image && pnpm run zip && pnpm run update-readme",
     "clean": "turbo run clean",
